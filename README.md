@@ -23,10 +23,11 @@ pip install -e .
 pip install pyyaml
 python -c 'import yaml, sys; print(yaml.safe_load(sys.stdin))' < data.yaml
 ```
+### How to mount a qcow2 disk image
+https://gist.github.com/shamil/62935d9b456a6f9877b5
 
 ## References
 - https://docs.openstack.org/diskimage-builder/latest/
 - http://www.rushiagr.com/blog/2016/01/02/build-vm-image-using-diskimage-builder/
 - https://review.openstack.org/#/c/504588/
 - https://atlas.ripe.net/docs/anchor-installation-vm/
-- https://gist.github.com/shamil/62935d9b456a6f9877b5

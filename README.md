@@ -1,11 +1,12 @@
 # ripe-anchor-image
 
 ## Requirements
-python
-pip
-virtualenv
+- python
+- pip
+- virtualenv
 
 ## Openstack Diskimage Builder
+```Shell
 cd ~
 mkdir dib
 cd dib
@@ -14,3 +15,4 @@ source env/bin/activate
 git clone https://git.openstack.org/openstack/diskimage-builder
 cd diskimage-builder/
 pip install -e .
+```

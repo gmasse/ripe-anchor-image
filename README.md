@@ -23,6 +23,12 @@ git clone https://github.com/gmasse/ripe-anchor-image.git
 cd ripe-anchor-image
 sh buildvm.sh
 ```
+## Upload image to glance
+```Shell
+sudo apt-get install python-openstackclient python-novaclient -y
+source openrc.sh
+glance image-create --name centos7-ripe-anchor --disk-format qcow2 --container-format bare --file $HOME/ripe-anchor-image/images/centos7-ripe-anchor.qcow2
+```
 ## Tips
 ### Testing YAML config
 ```Shell

@@ -2,7 +2,7 @@
 
 ## Requirements
 ```Shell
-sudo apt install python-pip
+sudo apt install python-pip qemu-utils kpartx
 sudo -H pip install virtualenv
 ```
 
@@ -32,3 +32,5 @@ https://gist.github.com/pshchelo/6ffabbffaedc46456b39c037d16e1d8c
 - http://www.rushiagr.com/blog/2016/01/02/build-vm-image-using-diskimage-builder/
 - https://review.openstack.org/#/c/504588/
 - https://atlas.ripe.net/docs/anchor-installation-vm/
+
+

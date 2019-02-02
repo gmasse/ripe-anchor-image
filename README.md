@@ -1,9 +1,10 @@
 # ripe-anchor-image
 
 ## Requirements
-- python
-- pip
-- virtualenv
+```Shell
+sudo apt install python-pip
+sudo -H pip install virtualenv
+```
 
 ## Openstack Diskimage Builder
 ```Shell

@@ -23,8 +23,8 @@ pip install -e .
 pip install pyyaml
 python -c 'import yaml, sys; print(yaml.safe_load(sys.stdin))' < data.yaml
 ```
-### How to mount a qcow2 disk image
-https://gist.github.com/shamil/62935d9b456a6f9877b5
+### How to mount a qcow2 disk image containing LVM
+https://gist.github.com/pshchelo/6ffabbffaedc46456b39c037d16e1d8c
 
 ## References
 - https://docs.openstack.org/diskimage-builder/latest/

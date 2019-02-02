@@ -5,8 +5,7 @@
 sudo apt install python-pip qemu-utils kpartx
 sudo -H pip install virtualenv
 ```
-
-## Openstack Diskimage Builder
+## Install Openstack Diskimage Builder
 ```Shell
 cd ~
 mkdir dib
@@ -17,7 +16,13 @@ git clone https://git.openstack.org/openstack/diskimage-builder
 cd diskimage-builder/
 pip install -e .
 ```
-
+## Build image
+```Shell
+cd ~
+git clone https://github.com/gmasse/ripe-anchor-image.git
+cd ripe-anchor-image
+sh buildvm.sh
+```
 ## Tips
 ### Testing YAML config
 ```Shell

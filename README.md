@@ -32,6 +32,11 @@ glance image-create --name centos7-ripe-anchor --disk-format qcow2 --container-f
 ## Launch a VM
 ```Shell
 nova boot --key-name my_ssh --flavor s1-8 --image centos7-ripe-anchor.2 ripe-anchor-gra5-1.2
+nova show ripe-anchor-gra5-1.2
+```
+...
+```Shell
+nova delete ripe-anchor-gra5-1.2
 ```
 ## Tips
 ### Testing YAML config

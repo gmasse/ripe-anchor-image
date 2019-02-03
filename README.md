@@ -29,6 +29,10 @@ sudo apt-get install python-openstackclient python-novaclient -y
 source openrc.sh
 glance image-create --name centos7-ripe-anchor --disk-format qcow2 --container-format bare --file $HOME/ripe-anchor-image/images/centos7-ripe-anchor.qcow2
 ```
+## Launch a VM
+```Shell
+nova boot --key-name my_ssh --flavor s1-8 --image centos7-ripe-anchor.2 ripe-anchor-gra5-1.2
+```
 ## Tips
 ### Testing YAML config
 ```Shell

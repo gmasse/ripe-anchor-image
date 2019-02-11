@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [ ${DIB_DEBUG_TRACE:-0} -gt 0 ]; then
+    set -x
+fi
+set -eu
+set -o pipefail
+
+# Centos 7 has a bug with cloud-init and ZEROCONF https://bugs.centos.org/view.php?id=15629
+[ -n "$ARCH" ]
+if [ 'amd64' = "$ARCH" ] ; then
+    ARCH="x86_64"
+fi
+
+case "$DISTRO_NAME" in
+    centos7)
+        URL="https://buildlogs.centos.org/c7-fasttrack.${ARCH}/cloud-init/20190106113327/18.2-1.el7.1.0.1.${ARCH}/cloud-init-18.2-1.el7.1.0.1.${ARCH}.rpm"
+        ;;
+    *)
+        echo "$DISTRO_NAME is not supported"
+        # Not really a failure; we just don't do anything
+        exit 0
+        ;;
+esac
+yum install -y $URL

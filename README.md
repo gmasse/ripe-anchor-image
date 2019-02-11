@@ -1,11 +1,17 @@
-# ripe-anchor-image
+# Build a RIPE Anchor Openstack Image
+
+We are using Openstack Diskimage-builder to generate a VM with the required partitionning layout.
+
+The process is fully automatized, reproductible and adaptable.
+The partitionning layout is defined in the YAML file: [block-device-custom.yaml](block-device-custom.yaml).
+
 
 ## Requirements
 ```Shell
 sudo apt install python-pip qemu-utils kpartx
 sudo -H pip install virtualenv
 ```
-## Install Openstack Diskimage Builder
+## Install Openstack Diskimage-builder
 ```Shell
 cd ~
 mkdir dib

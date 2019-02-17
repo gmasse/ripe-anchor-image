@@ -2,7 +2,7 @@
 
 - local_loop:
     name: image0
-    size: 39GB
+    size: 50GiB
 
 - partitioning:
     base: image0
@@ -42,15 +42,15 @@
 
       - name: lv_var
         base: vg
-        size: 14G
+        size: 20G
 
       - name: lv_home
         base: vg
-        size: 14G
+        size: 20G
 
       - name: lv_tmp
         base: vg
-        size: 2G
+        size: 3.75G
 
       - name: lv_swap
         base: vg

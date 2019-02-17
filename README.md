@@ -46,6 +46,24 @@ nova show ripe-anchor-gra5-1
 nova delete ripe-anchor-gra5-1
 ```
 ## Tips
+### [OVH] Configure IPv6
+Edit `/etc/sysconfig/network-scripts/ifcfg-eth0` and add:
+```
+IPV6INIT=yes
+IPV6ADDR=2001:41d0:XXXX:XXXX::XXXX/128
+IPV6_DEFAULTGW=2001:41d0:XXXX:XXXX::1
+```
+Create `/etc/sysconfig/network-scripts/route6-eth0`:
+```
+2001:41d0:XXXX:XXXX::1 dev eth0
+default via 2001:41d0:XXXX:XXXX::1
+```
+Finally, we avoid cloud-init to overwrite network configuration files.
+Edit `/etc/cloud/cloud.cfg` and add:
+```
+network:
+  config: disabled
+```
 ### Testing YAML config
 ```Shell
 pip install pyyaml

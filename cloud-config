@@ -7,4 +7,3 @@ mounts:
  
 bootcmd:
  - [ cloud-init-per, once, make_swap, mkswap, /dev/vg/lv_swap ]
-# - swapon /dev/vg/lv_swap

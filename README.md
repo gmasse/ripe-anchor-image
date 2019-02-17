@@ -34,11 +34,11 @@ sh buildvm.sh
 sudo apt-get install python-openstackclient python-novaclient -y
 source openrc.sh
 export OS_REGION_NAME="GRA5"
-glance image-create --name centos7-ripe-anchor --disk-format qcow2 --container-format bare --architecture x86_64 --os-distro centos --os-version 7.3 --min-ram 2048 --min-disk 50 --file $HOME/ripe-anchor-image/images/centos7-ripe-anchor.qcow2
+glance image-create --name centos7-ripe-anchor --disk-format qcow2 --container-format bare --architecture x86_64 --os-distro centos --os-version 7.6 --min-ram 2048 --min-disk 50 --file $HOME/ripe-anchor-image/images/centos7-ripe-anchor.qcow2
 ```
 ## Launch a VM
 ```Shell
-nova boot --key-name my_ssh --flavor b2-7 --image centos7-ripe-anchor.2 ripe-anchor-gra5-1 --user-data cloud-config
+nova boot --key-name my_ssh --flavor b2-7 --image centos7-ripe-anchor ripe-anchor-gra5-1 --user-data cloud-config
 nova show ripe-anchor-gra5-1
 ```
 ...
